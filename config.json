@@ -1,0 +1,93 @@
+{
+
+    "devices":[
+        {
+            "name": "battery_led",
+            "device_class": "Led",
+            "module": "components",
+            "attributes":{
+                "pin":13
+                }
+        },
+        {
+            "name": "motor_shield",
+            "device_class": "MotorShield",
+            "module": "motorshield",
+            "attributes":
+                {
+                "dir_latch":23,
+                "dir_clk":22,
+                "dir_ser":21,
+                "pwm_pin1":33,
+                "pwm_pin2":32,
+                "pwm_pin3":18,
+                "pwm_pin4":19
+                }
+                
+        },
+        {
+            "name": "joystick",
+            "device_class": "Joystick",
+            "module": "components",
+            "attributes":
+                {
+                "x":39,
+                "y":26
+                }
+        }
+        {
+            "name": "front_lights",
+            "device_class": "CarLightsFront",
+            "module": "car",
+            "attributes":
+                {
+                "pin":12
+                }  
+        }
+        {
+            "name": "rear_lights",
+            "device_class": "CarLightsRear",
+            "module": "car",
+            "attributes":
+                {
+                "pin":14
+                }   
+        }
+        {
+            "name": "distance_sensor",
+            "device_class": "HCSR04",
+            "module": "hcsr04",
+            "attributes":
+                {
+                "trigger_pin":25,
+                "echo_pin":26
+                }   
+        }
+        {
+            "name": "df",
+            "device_class": "SireneDFPlayer",
+            "module": "dfplayer",
+            "attributes":
+                {
+                "uart_id":1,
+                "tx_pin_id":16,
+                "rx_pin_id":17
+                }   
+        }
+        {
+            "name": "voltage_meter",
+            "device_class": "VoltageMeter",
+            "module": "components",
+            "attributes":
+                {
+                "pin":34,
+                "voltage_devider": 1
+                }  
+        }   
+    ]
+    "winter_blue":{
+        "name":"basman",
+        "handler_class":"__main__",
+        "handler_function": "wb_handler",
+        }
+}
